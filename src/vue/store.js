@@ -154,7 +154,7 @@ export default new Vuex.Store({
 
           if (target !== 0) {
             updateData['target' + button] = target;
-            insertData['targetDifficulty' + button] = targetargetDifficulty;
+            updateData['targetDifficulty' + button] = targetDifficulty;
           }
         }
 
@@ -177,37 +177,59 @@ export default new Vuex.Store({
 
           if (target !== 0) {
             insertData['target' + button] = target;
-            insertData['targetDifficulty' + button] = targetargetDifficulty;
+            insertData['targetDifficulty' + button] = targetDifficulty;
           }
         }
 
         state.skillCollection.insert(insertData);
       }
     },
+
+    destroyScore(state) {
+      state.scoreDb.deleteDatabase();
+    },
+
+    destroyPoint(state) {
+      state.memDb.deleteDatabase();
+    },
   },
 
   actions: {
-    init({ commit }) {
-      const memDatabase = new Loki('temp.db');
-      commit('initMemoryDatabase', memDatabase);
+    async init({ commit }) {
+      return new Promise((resolve, reject) => {
+        const memDatabase = new Loki('temp.db', {
+          adapter: new Loki.LokiMemoryAdapter(),
+        });
+        commit('initMemoryDatabase', memDatabase);
 
-      const scoreDatabase = new Loki('score.db', {
-        autoload: true,
-        autoloadCallback: () => {
-          commit('initScoreDatabase', scoreDatabase);
-          commit('setReady');
-        },
-        adapter: new Loki.LokiLocalStorageAdapter(),
+        const scoreDatabase = new Loki('score.db', {
+          autoload: true,
+          autoloadCallback: () => {
+            commit('initScoreDatabase', scoreDatabase);
+            commit('setReady');
+            resolve();
+          },
+          adapter: new Loki.LokiLocalStorageAdapter(),
+        });
       });
     },
 
-    saveScore({ commit }, title, data) {
-      commit('writeScore', title, data);
-      commit('writePoint', title, data);
+    saveScore({ commit }, data) {
+      commit('writeScore', data);
+      commit('writePoint', data);
+    },
+
+    async destroy({ commit }) {
+      commit('destroyScore');
+      commit('destroyPoint');
     },
   },
 
   getters: {
+    getMusic: state => title => {
+      return state.musicCollection.findOne({ title });
+    },
+
     getMusicsByCategory: state => category => {
       return state.musicCollection.chain()
         .find({ category })

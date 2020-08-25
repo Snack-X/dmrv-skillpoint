@@ -1,4 +1,4 @@
-# DJMAX RESPECT V Skillpoint Calculator
+# DJMAX RESPECT V Skillpoint Tracker
 
 **WORK IN PROGRESS**
 

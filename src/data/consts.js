@@ -1,37 +1,34 @@
-module.exports.BUTTONS = [
-  '4',
-  '5',
-  '6',
-  '8',
-];
+const BUTTON_4 = '4',
+      BUTTON_5 = '5',
+      BUTTON_6 = '6',
+      BUTTON_8 = '8';
 
-module.exports.DIFFICULTIES_UPPERCASE = [
-  'NM',
-  'HD',
-  'MX',
-  'SC',
-];
+const DIFFICULTIES_UPPERCASE = [ 'NM', 'HD', 'MX', 'SC' ];
+const DIFFICULTIES_LOWERCASE = [ 'nm', 'hd', 'mx', 'sc' ];
 
-module.exports.DIFFICULTIES_LOWERCASE = [
-  'nm',
-  'hd',
-  'mx',
-  'sc',
-];
-
-module.exports.CATEGORIES = [
+const CATEGORIES_MAIN = [
   'RESPECT',
   'PORTABLE 1',
   'PORTABLE 2',
   'TRILOGY',
   'CLAZZIQUAI',
   'BLACK SQUARE',
+];
+const CATEGORIES_SUB = [
   'V EXTENSION',
   'EMOTIONAL SENSE',
+];
+const CATEGORIES_COLLAB = [
   'GUILTY GEAR',
   'CYTUS',
   'DEEMO',
   'GROOVE COASTER',
+];
+
+const CATEGORIES = [
+  ...CATEGORIES_MAIN,
+  ...CATEGORIES_SUB,
+  ...CATEGORIES_COLLAB,
 ];
 
 const DEFAULT_MAX_SKILL_POINT_PER_LEVEL = {
@@ -44,15 +41,15 @@ const DEFAULT_MAX_SKILL_POINT_PER_LEVEL = {
   '7': 109,
   '8': 122,
   '9': 134,
- '10': 145,
- '11': 156,
- '12': 166,
- '13': 176,
- '14': 185,
- '15': 193,
+  '10': 145,
+  '11': 156,
+  '12': 166,
+  '13': 176,
+  '14': 185,
+  '15': 193,
 };
 
-module.exports.MAX_SKILL_POINT_PER_LEVEL = {
+const MAX_SKILL_POINT_PER_LEVEL = {
   '4': {
     ...DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
     '14.1': 185.8,
@@ -137,10 +134,10 @@ module.exports.MAX_SKILL_POINT_PER_LEVEL = {
   },
 };
 
-module.exports.MULTIPLIER_PERPECT = 1.02;
-module.exports.MULTIPLIER_NOT_MAX_COMBO = 0.97;
+const MULTIPLIER_PERPECT = 1.02;
+const MULTIPLIER_NOT_MAX_COMBO = 0.97;
 
-module.exports.RANKS = {
+const RANKS = {
   '4': [
     { name: 'THE DJMAX', requires: 9900 },
     { name: 'DJMAX GRAND MASTER 1', requires: 9820 },
@@ -277,4 +274,29 @@ module.exports.RANKS = {
     { name: 'AMATEUR 4', requires: 500 },
     { name: 'BEGINNER', requires: 0 },
   ],
+};
+
+
+module.exports = {
+  BUTTON_4,
+  BUTTON_5,
+  BUTTON_6,
+  BUTTON_8,
+  BUTTONS: [ BUTTON_4, BUTTON_5, BUTTON_6, BUTTON_8 ],
+
+  DIFFICULTIES_UPPERCASE,
+  DIFFICULTIES_LOWERCASE,
+
+  CATEGORIES_MAIN,
+  CATEGORIES_SUB,
+  CATEGORIES_COLLAB,
+  CATEGORIES,
+
+  DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
+  MAX_SKILL_POINT_PER_LEVEL,
+
+  MULTIPLIER_PERPECT,
+  MULTIPLIER_NOT_MAX_COMBO,
+
+  RANKS,
 };

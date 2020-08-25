@@ -1,26 +1,30 @@
 {
   "name": "dmrv-skillpoint",
-  "version": "0.0.0",
-  "description": "DJMAX RESPECT V Skillpoint Calculator",
+  "version": "1.0.0",
+  "description": "DJMAX RESPECT V Skillpoint Tracker",
   "scripts": {
-    "dev": "parcel --port 37712 src/index.html",
+    "dev": "NODE_ENV=development parcel --port 37712 --out-dir .dev src/index.html",
     "build": "npm run build-clean && npm run build-data && npm run build-app",
     "build-clean": "rimraf dist",
     "build-data": "node scripts/compileData.js",
-    "build-app": "parcel build src/index.html --no-source-maps --out-dir dist"
+    "build-app": "NODE_ENV=production parcel build src/index.html --no-source-maps --out-dir dist"
   },
   "author": "Snack <korsnack@korsnack.kr>",
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
     "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^3.2.2",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
     "lokijs": "^1.5.9",
+    "popper.js": "^1.16.1",
     "vue": "^2.6.11",
     "vuex": "^3.5.1"
   },

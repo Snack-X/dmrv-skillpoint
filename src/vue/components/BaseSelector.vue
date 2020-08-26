@@ -8,11 +8,11 @@
 
 <style lang="scss" scoped>
 .nav {
-  gap: .5rem;
-  margin: .5rem 0;
+  margin: .5rem -.25rem;
 
   .nav-link {
     padding: .25rem 1rem;
+    margin: .25rem;
     font-weight: bold;
     border: 2px solid;
     cursor: pointer;

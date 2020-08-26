@@ -1,19 +1,20 @@
 {
   "name": "dmrv-skillpoint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DJMAX RESPECT V Skillpoint Tracker",
   "scripts": {
     "dev": "NODE_ENV=development parcel --port 37712 --out-dir .dev src/index.html",
     "build": "npm run build-clean && npm run build-data && npm run build-app",
-    "build-clean": "rimraf dist",
+    "build-clean": "rimraf docs",
     "build-data": "node scripts/compileData.js",
-    "build-app": "NODE_ENV=production parcel build src/index.html --no-source-maps --out-dir dist"
+    "build-app": "NODE_ENV=production parcel build src/index.html --no-source-maps --experimental-scope-hoisting --out-dir docs"
   },
   "author": "Snack <korsnack@korsnack.kr>",
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.5.0",
     "postcss-modules": "^3.2.2",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
@@ -30,5 +31,8 @@
   },
   "browserslist": [
     "since 2020-01"
-  ]
+  ],
+  "staticFiles": {
+    "staticPath": ["src/CNAME"]
+  }
 }

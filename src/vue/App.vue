@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="/">
-          DMR V Skillpoint <sub>1.0.0</sub>
+          DMR V Skillpoint <sub>{{ pkgVersion }}</sub>
         </a>
 
         <ul class="navbar-nav">
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { version as pkgVersion } from '../../package.json';
 import HelpView from './view/HelpView';
 import ScoreInputView from './view/ScoreInputView';
 import RankCheckView from './view/RankCheckView';
@@ -42,6 +43,10 @@ export default {
     return {
       currentView: 'score',
     }
+  },
+
+  computed: {
+    pkgVersion() { return pkgVersion; },
   },
 
   async created() {

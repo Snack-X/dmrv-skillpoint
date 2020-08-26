@@ -4,7 +4,8 @@ import store from '../vue/store';
 import App from '../vue/App.vue';
 
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+import '../css/bootstrap.scss';
+import '../css/global.scss';
 
 new Vue({
   render: createElement => createElement(App),

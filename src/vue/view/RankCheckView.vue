@@ -48,6 +48,7 @@
             <th class="text-center">#</th>
             <th>TITLE</th>
             <th class="text-center">DIFFICULTY</th>
+            <th class="text-center">LEVEL</th>
             <th class="text-center">ACCURACY</th>
             <th class="text-center">SKILLPOINT</th>
           </tr>
@@ -57,6 +58,7 @@
             <td class="cell-idx text-center">{{ idx + 1 }}</td>
             <td class="cell-title">{{ row.title }}</td>
             <td class="cell-difficulty text-center">{{ row.difficulty.toUpperCase() }}</td>
+            <td class="cell-level text-center">{{ row.level }}</td>
             <td class="cell-accuracy text-center">{{ row.accuracy }}%</td>
             <td class="cell-skillpoint text-center">{{ row.skillpoint.toFixed(2) }}</td>
           </tr>
@@ -118,6 +120,7 @@ export default {
 
       for (const row of top50) {
         const title = row.title;
+        const music = this.$store.getters.getMusic(title);
         const score = this.$store.getters.getScore(title);
 
         const rankedRow = {
@@ -126,6 +129,7 @@ export default {
           skillpoint: row['target' + this.currentButton],
         };
 
+        rankedRow.level = music[rankedRow.difficulty + this.currentButton];
         rankedRow.accuracy = score[rankedRow.difficulty + this.currentButton][0];
         this.ranked.push(rankedRow);
 
@@ -223,6 +227,10 @@ export default {
 .cell-difficulty {
   width: 8rem;
   font-weight: bold;
+}
+
+.cell-level {
+  width: 6rem;
 }
 
 .cell-accuracy {

@@ -1,6 +1,6 @@
 {
   "name": "dmrv-skillpoint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "DJMAX RESPECT V Skillpoint Tracker",
   "scripts": {
     "dev": "NODE_ENV=development parcel --port 37712 --out-dir .dev src/index.html",
@@ -33,6 +33,8 @@
     "since 2020-01"
   ],
   "staticFiles": {
-    "staticPath": ["src/CNAME"]
+    "staticPath": [
+      "src/CNAME"
+    ]
   }
 }

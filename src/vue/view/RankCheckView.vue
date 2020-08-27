@@ -21,18 +21,20 @@
             <div class="rank">{{ rank }}</div>
           </div>
         </div>
-        <div class="col col-6">
-          <div class="rank-col">
-            <h3 class="col-title">TO NEXT RANK</h3>
-            <div class="adjusted-skillpoint">{{ untilNextRank.toFixed(4) }}</div>
+        <template v-if="nextRank">
+          <div class="col col-6">
+            <div class="rank-col">
+              <h3 class="col-title">TO NEXT RANK</h3>
+              <div class="adjusted-skillpoint">{{ untilNextRank.toFixed(4) }}</div>
+            </div>
           </div>
-        </div>
-        <div class="col col-6">
-          <div class="rank-col">
-            <h3 class="col-title">NEXT RANK IS</h3>
-            <div class="rank">{{ nextRank }}</div>
+          <div class="col col-6">
+            <div class="rank-col">
+              <h3 class="col-title">NEXT RANK IS</h3>
+              <div class="rank">{{ nextRank }}</div>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
 
       <div class="progress">

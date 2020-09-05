@@ -118,6 +118,14 @@ export default {
 
       sortKey: 'title',
       sortDescending: false,
+
+      // descending
+      sortFn: {
+        title: (a, b) => b.title.localeCompare(a.title) || b.index - a.index,
+        level: (a, b) => b.level.localeCompare(a.level) || b.accuracy - a.accuracy,
+        accuracy: (a, b) => b.accuracy - a.accuracy || b.skillpoint - a.skillpoint,
+        skillpoint: (a, b) => b.skillpoint - a.skillpoint || b.accuracy - a.accuracy,
+      }
     };
   },
 
@@ -126,11 +134,7 @@ export default {
 
     musicsSorted() {
       return this.statistics[this.selectedLevel].musics.slice().sort((a, b) => {
-        if (this.sortKey === 'title' || this.sortKey === 'level') {
-          return this.sortDescending ? b[this.sortKey].localeCompare(a[this.sortKey]) : a[this.sortKey].localeCompare(b[this.sortKey]);
-        } else {
-          return this.sortDescending ? b[this.sortKey] - a[this.sortKey] : a[this.sortKey] - b[this.sortKey];
-        }
+        return this.sortDescending ? this.sortFn[this.sortKey](a, b) : this.sortFn[this.sortKey](b, a);
       });
     },
   },
@@ -186,7 +190,7 @@ export default {
           statistics[levelBase].accuracyAverage.push(accuracy);
           statistics[levelBase].skillpointAverage.push(skillpoint);
           statistics[levelBase].musics.push({
-            title: music.title,
+            index: music.index, title: music.title,
             difficulty, level, accuracy, skillpoint, maxCombo,
           });
         }

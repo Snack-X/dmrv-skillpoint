@@ -27,6 +27,8 @@ export default new Vuex.Store({
 
     /** @type Collection */
     scoreCollection: null,
+
+    selectedButton: '4',
   },
 
   mutations: {
@@ -102,6 +104,10 @@ export default new Vuex.Store({
 
     setReady(state) {
       state.ready = true;
+    },
+
+    selectButton(state, button) {
+      state.selectedButton = button;
     },
 
     writeScore(state, { title, ...data }) {
@@ -214,6 +220,10 @@ export default new Vuex.Store({
       });
     },
 
+    selectButton({ commit }, button) {
+      commit('selectButton', button);
+    },
+
     saveScore({ commit }, data) {
       commit('writeScore', data);
       commit('writePoint', data);
@@ -226,6 +236,10 @@ export default new Vuex.Store({
   },
 
   getters: {
+    getSelectedButton: state => {
+      return state.selectedButton;
+    },
+
     getMusic: state => title => {
       return state.musicCollection.findOne({ title });
     },

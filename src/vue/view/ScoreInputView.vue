@@ -2,7 +2,7 @@
   <section class="score-input-view">
     <div class="container">
       <h3 class="nav-title">BUTTON</h3>
-      <button-selector v-model="currentButton"></button-selector>
+      <button-selector @update="currentButton = $event"></button-selector>
 
       <h3 class="nav-title">CATEGORY</h3>
       <category-selector v-model="currentCategory"></category-selector>

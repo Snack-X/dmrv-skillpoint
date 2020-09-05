@@ -2,7 +2,7 @@
   <section class="rank-check-view">
     <div class="container">
       <h3 class="nav-title">BUTTON</h3>
-      <button-selector v-model="currentButton"></button-selector>
+      <button-selector @update="currentButton = $event"></button-selector>
 
       <div class="row row-rank">
         <div class="col col-6">

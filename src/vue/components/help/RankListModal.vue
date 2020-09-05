@@ -9,7 +9,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <button-selector v-model="currentButton"></button-selector>
+          <button-selector @update="currentButton = $event"></button-selector>
 
           <table class="table table-sm rank-table">
             <thead>

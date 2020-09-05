@@ -4,7 +4,12 @@
       v-for="button in BUTTONS" :key="`button-${button}`"
       class="nav-item"
     >
-      <a class="nav-link" :class="{ 'active': value === button }" @click="$emit('input', button)">{{ button }} BUTTONS</a>
+      <a
+        class="nav-link" :class="{ 'active': button === selectedButton }"
+        @click="onClick(button)"
+      >
+        {{ button }} BUTTONS
+      </a>
     </li>
   </base-selector>
 </template>
@@ -18,16 +23,21 @@ export default {
     BaseSelector,
   },
 
-  props: {
-    value: {
-      type: String,
-      default: '4',
-    },
-  },
-
   computed: {
     BUTTONS() { return BUTTONS; },
+    selectedButton() { return this.$store.getters.getSelectedButton; },
   },
+
+  created() {
+    this.$emit('update', this.selectedButton);
+  },
+
+  methods: {
+    onClick(button) {
+      this.$store.dispatch('selectButton', button);
+      this.$emit('update', button);
+    },
+  }
 };
 </script>
 

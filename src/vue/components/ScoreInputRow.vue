@@ -1,5 +1,5 @@
 <template>
-  <tr class="score-input-row">
+  <tr class="score-input-row" :class="{ 'is-top-50': isSkillTop50 }">
     <td class="title-cell">{{ music.title }}</td>
 
     <template v-for="difficulty in DIFFICULTIES_LOWERCASE">
@@ -68,6 +68,7 @@ export default {
         sc: 0,
       },
       target: 0,
+      isSkillTop50: false,
     };
   },
 
@@ -96,6 +97,8 @@ export default {
       this.skillpoint[diff] = dbSkill[diff + this.button] || 0;
       this.target = dbSkill['target' + this.button] || 0;
     }
+
+    this.isSkillTop50 = this.$store.getters.getIsSkillTop50(this.button, this.music.title);
   },
 
   methods: {
@@ -120,6 +123,8 @@ export default {
         this.skillpoint[diff] = dbSkill[diff + this.button] || 0;
         this.target = dbSkill['target' + this.button] || 0;
       }
+
+      this.isSkillTop50 = this.$store.getters.getIsSkillTop50(this.button, this.music.title);
     },
 
     onInput(type, difficulty, value) {
@@ -138,6 +143,18 @@ export default {
   td {
     padding: .375rem 0;
     vertical-align: middle;
+  }
+
+  &.is-top-50 {
+    .title-cell {
+      font-weight: bold;
+      background-color: lighten($primary, 45%);
+    }
+
+    .skill-cell {
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
   }
 }
 

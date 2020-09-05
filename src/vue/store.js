@@ -255,5 +255,17 @@ export default new Vuex.Store({
         .limit(50)
         .data();
     },
+
+    getIsSkillTop50: state => (button, title) => {
+      const prop = 'target' + button;
+
+      return state.skillCollection.chain()
+        .find({ [prop]: { $exists: true } })
+        .find({ [prop]: { $gt: 0 } })
+        .simplesort(prop, { desc: true })
+        .limit(50)
+        .find({ title: title })
+        .data().length > 0;
+    },
   }
 })

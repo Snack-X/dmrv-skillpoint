@@ -7,22 +7,14 @@
         </a>
 
         <ul class="navbar-nav">
-          <li class="nav-item" :class="{ 'active': currentView === 'help' }">
-            <a class="nav-link" @click="currentView = 'help'">HELP</a>
-          </li>
-          <li class="nav-item" :class="{ 'active': currentView === 'score' }">
-            <a class="nav-link" @click="currentView = 'score'">SCORE INPUT</a>
-          </li>
-          <li class="nav-item" :class="{ 'active': currentView === 'rank' }">
-            <a class="nav-link" @click="currentView = 'rank'">RANK CHECK</a>
+          <li v-for="(text, menu) in menuItems" :key="`menu-${menu}`" class="nav-item" :class="{ 'active': currentView === menu }">
+            <a class="nav-link" @click="currentView = menu">{{ text }}</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <help-view v-if="currentView === 'help'"></help-view>
-    <score-input-view v-if="currentView === 'score'"></score-input-view>
-    <rank-check-view v-if="currentView === 'rank'"></rank-check-view>
+    <component :is="viewComponent"></component>
   </div>
 </template>
 
@@ -31,14 +23,9 @@ import { version as pkgVersion } from '/../package.json';
 import HelpView from '/vue/view/HelpView';
 import ScoreInputView from '/vue/view/ScoreInputView';
 import RankCheckView from '/vue/view/RankCheckView';
+import StatisticsView from '/vue/view/StatisticsView';
 
 export default {
-  components: {
-    HelpView,
-    ScoreInputView,
-    RankCheckView,
-  },
-
   data() {
     return {
       currentView: 'score',
@@ -47,6 +34,24 @@ export default {
 
   computed: {
     pkgVersion() { return pkgVersion; },
+
+    menuItems() {
+      return {
+        help: 'HELP',
+        score: 'SCORE INPUT',
+        rank: 'RANK CHECK',
+        stats: 'STATISTICS',
+      };
+    },
+
+    viewComponent() {
+      return {
+        help: HelpView,
+        score: ScoreInputView,
+        rank: RankCheckView,
+        stats: StatisticsView,
+      }[this.currentView];
+    },
   },
 
   async created() {

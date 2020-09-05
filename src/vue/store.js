@@ -255,6 +255,10 @@ export default new Vuex.Store({
       return state.scoreCollection.findOne({ title });
     },
 
+    getScores: state => {
+      return state.scoreCollection.find();
+    },
+
     getSkill: state => title => {
       return state.skillCollection.findOne({ title });
     },

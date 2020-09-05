@@ -31,6 +31,24 @@ const CATEGORIES = [
   ...CATEGORIES_COLLAB,
 ];
 
+const LEVELS_BASE = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+];
+
 const DEFAULT_MAX_SKILL_POINT_PER_LEVEL = {
   '1':  16,
   '2':  32,
@@ -291,6 +309,7 @@ module.exports = {
   CATEGORIES_COLLAB,
   CATEGORIES,
 
+  LEVELS_BASE,
   DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
   MAX_SKILL_POINT_PER_LEVEL,
 

@@ -32,6 +32,17 @@
       </section>
 
       <section class="help-section">
+        <h2 class="title">랭크의 목록과 기준은 어떻게 되나요?</h2>
+        <p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rank-list-modal">
+            이 버튼을 눌러서 랭크 목록과 기준을 확인할 수 있습니다.
+          </button>
+        </p>
+      </section>
+
+      <rank-list-modal id="rank-list-modal"></rank-list-modal>
+
+      <section class="help-section">
         <h2 class="title">구글 스프레드시트를 이용하여 입력한 데이터는 어떻게 가져오나요?</h2>
         <ol>
           <li>본인의 구글 스프레드시트로 이동합니다. (1.2, 1.3, 1.4 버전의 데이터를 가져올 수 있습니다.)</li>
@@ -71,12 +82,10 @@
 </template>
 
 <script>
-import { RANKS } from '../../data/consts';
+import RankListModal from '../components/help/RankListModal';
 
 export default {
-  computed: {
-    RANKS() { return RANKS; },
-  },
+  components: { RankListModal },
 };
 </script>
 

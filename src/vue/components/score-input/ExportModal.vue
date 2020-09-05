@@ -7,7 +7,7 @@
       <p class="description">스킬포인트 데이터를 내보냅니다.</p>
       <p class="description">이 브라우저에 저장된 데이터를 <strong>IMPORT</strong> 기능을 통해 다른 브라우저나 다른 컴퓨터에서 동일하게 불러올 수 있습니다.</p>
 
-      <textarea class="form-control">{{ outputData }}</textarea>
+      <textarea v-model="outputData" class="form-control"></textarea>
     </template>
   </base-modal>
 </template>

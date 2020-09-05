@@ -134,7 +134,7 @@ export default {
         };
 
         rankedRow.level = music[rankedRow.difficulty + this.currentButton];
-        [rankedRow.accuracy, rankedRow.maxcombo] = score[rankedRow.difficulty + this.currentButton][0];
+        [rankedRow.accuracy, rankedRow.maxcombo] = score[rankedRow.difficulty + this.currentButton];
         this.ranked.push(rankedRow);
 
         total += rankedRow.skillpoint;

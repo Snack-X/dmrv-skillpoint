@@ -44,7 +44,7 @@
       <h3 class="table-title">
         DETAIL STATISTICS
         <p class="additional-description">
-          TITLE / LEVEL / RATE 를 클릭하면 정렬이 가능합니다.
+          TITLE, LEVEL, RATE, MAX, SKILL 등을 클릭하면 정렬이 가능합니다.
         </p>
       </h3>
       <table class="table table-detail">
@@ -74,6 +74,13 @@
             </th>
             <th
               class="text-center is-sortable"
+              :class="sortKey === 'maxcombo' ? [ 'is-sorted', `is-sort-${sortDescending ? 'descending' : 'ascending'}`] : []"
+              @click="changeSort('maxcombo')"
+            >
+              MAX
+            </th>
+            <th
+              class="text-center is-sortable"
               :class="sortKey === 'skillpoint' ? [ 'is-sorted', `is-sort-${sortDescending ? 'descending' : 'ascending'}`] : []"
               @click="changeSort('skillpoint')"
             >
@@ -90,6 +97,9 @@
             <td class="cell-difficulty text-center">{{ row.difficulty.toUpperCase() }}</td>
             <td class="cell-level text-center">{{ row.level }}</td>
             <td class="cell-accuracy text-center">{{ row.accuracy.toFixed(2) }}%</td>
+            <td class="cell-maxcombo text-center">
+              <div class="icon-maxcombo" :class="{ 'is-active': row.maxcombo }"></div>
+            </td>
             <td class="cell-skillpoint text-center">{{ row.skillpoint.toFixed(2) }}</td>
           </tr>
         </tbody>
@@ -113,10 +123,10 @@ export default {
 
       scores: [],
 
-      selectedLevel: '15',
+      selectedLevel: null,
       statistics: {},
 
-      sortKey: 'title',
+      sortKey: null,
       sortDescending: false,
 
       // descending
@@ -124,6 +134,7 @@ export default {
         title: (a, b) => b.title.localeCompare(a.title) || b.index - a.index,
         level: (a, b) => b.level.localeCompare(a.level) || b.accuracy - a.accuracy,
         accuracy: (a, b) => b.accuracy - a.accuracy || b.skillpoint - a.skillpoint,
+        maxcombo: (a, b) => b.maxcombo - a.maxcombo || b.skillpoint - a.skillpoint,
         skillpoint: (a, b) => b.skillpoint - a.skillpoint || b.accuracy - a.accuracy,
       }
     };
@@ -133,6 +144,9 @@ export default {
     LEVELS_BASE() { return LEVELS_BASE; },
 
     musicsSorted() {
+      if (this.selectedLevel === null) return [];
+      if (this.sortKey === null) return this.statistics[this.selectedLevel].musics;
+
       return this.statistics[this.selectedLevel].musics.slice().sort((a, b) => {
         return this.sortDescending ? this.sortFn[this.sortKey](a, b) : this.sortFn[this.sortKey](b, a);
       });
@@ -184,14 +198,14 @@ export default {
             };
           }
 
-          let [accuracy, maxCombo] = score;
+          let [accuracy, maxcombo] = score;
           accuracy = parseFloat(accuracy);
 
           statistics[levelBase].accuracyAverage.push(accuracy);
           statistics[levelBase].skillpointAverage.push(skillpoint);
           statistics[levelBase].musics.push({
             index: music.index, title: music.title,
-            difficulty, level, accuracy, skillpoint, maxCombo,
+            difficulty, level, accuracy, skillpoint, maxcombo,
           });
         }
       }
@@ -296,6 +310,14 @@ export default {
 }
 
 .table-detail {
+  th, td {
+    padding: .75rem .5rem;
+  }
+
+  th {
+    transition: background-color .25s;
+  }
+
   .is-sortable {
     cursor: pointer;
 
@@ -332,20 +354,39 @@ export default {
   }
 
   .cell-difficulty {
-    width: 8rem;
+    width: 7rem;
     font-weight: bold;
   }
 
   .cell-level {
-    width: 6rem;
+    width: 5rem;
   }
 
   .cell-accuracy {
-    width: 6rem;
+    width: 5rem;
+  }
+
+  .cell-maxcombo {
+    width: 4rem;
   }
 
   .cell-skillpoint {
-    width: 6rem;
+    width: 5rem;
+  }
+
+  .icon-maxcombo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    background-image: url('/images/max_combo.png');
+    background-size: cover;
+    opacity: .25;
+
+    &.is-active {
+      opacity: 1;
+    }
   }
 }
 </style>

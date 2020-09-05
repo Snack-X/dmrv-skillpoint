@@ -50,6 +50,7 @@
             <th class="text-center">DIFFICULTY</th>
             <th class="text-center">LEVEL</th>
             <th class="text-center">RATE</th>
+            <th class="text-center">MAX</th>
             <th class="text-center">SKILL</th>
           </tr>
         </thead>
@@ -60,6 +61,9 @@
             <td class="cell-difficulty text-center">{{ row.difficulty.toUpperCase() }}</td>
             <td class="cell-level text-center">{{ row.level }}</td>
             <td class="cell-accuracy text-center">{{ row.accuracy }}%</td>
+            <td class="cell-maxcombo text-center">
+              <div class="icon-maxcombo" :class="{ 'is-active': row.maxcombo }"></div>
+            </td>
             <td class="cell-skillpoint text-center">{{ row.skillpoint.toFixed(2) }}</td>
           </tr>
         </tbody>
@@ -130,7 +134,7 @@ export default {
         };
 
         rankedRow.level = music[rankedRow.difficulty + this.currentButton];
-        rankedRow.accuracy = score[rankedRow.difficulty + this.currentButton][0];
+        [rankedRow.accuracy, rankedRow.maxcombo] = score[rankedRow.difficulty + this.currentButton][0];
         this.ranked.push(rankedRow);
 
         total += rankedRow.skillpoint;
@@ -182,6 +186,10 @@ export default {
 .row-rank {
   margin: 1rem -.5rem 1rem;
 
+  th, td {
+    padding: .75rem .5rem;
+  }
+
   .col {
     padding: .5rem;
     text-align: center;
@@ -225,19 +233,38 @@ export default {
 }
 
 .cell-difficulty {
-  width: 8rem;
+  width: 7rem;
   font-weight: bold;
 }
 
 .cell-level {
-  width: 6rem;
+  width: 5rem;
 }
 
 .cell-accuracy {
-  width: 6rem;
+  width: 5rem;
+}
+
+.cell-maxcombo {
+  width: 4rem;
 }
 
 .cell-skillpoint {
-  width: 6rem;
+  width: 5rem;
+}
+
+.icon-maxcombo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  background-image: url('/images/max_combo.png');
+  background-size: cover;
+  opacity: .25;
+
+  &.is-active {
+    opacity: 1;
+  }
 }
 </style>

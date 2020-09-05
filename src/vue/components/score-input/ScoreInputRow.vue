@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { DIFFICULTIES_LOWERCASE } from '../../data/consts';
+import { DIFFICULTIES_LOWERCASE } from '~/data/consts';
 
 export default {
   props: {
@@ -136,8 +136,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
 
 .score-input-row {
   td {
@@ -212,7 +212,7 @@ export default {
   border: 0;
   outline: 0;
   background: transparent;
-  background-image: url('../../images/max_combo.png');
+  background-image: url('/images/max_combo.png');
   background-size: cover;
   opacity: .25;
   cursor: pointer;

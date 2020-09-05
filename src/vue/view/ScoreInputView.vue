@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import ButtonSelector from '../components/ButtonSelector';
-import CategorySelector from '../components/CategorySelector';
-import ScoreInputRow from '../components/ScoreInputRow';
-import ImportModal from '../components/ImportModal';
-import ExportModal from '../components/ExportModal';
+import ButtonSelector from '/vue/components/common/ButtonSelector';
+import CategorySelector from '/vue/components/common/CategorySelector';
+import ScoreInputRow from '/vue/components/score-input/ScoreInputRow';
+import ImportModal from '/vue/components/score-input/ImportModal';
+import ExportModal from '/vue/components/score-input/ExportModal';
 
 export default {
   components: {
@@ -106,8 +106,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
 
 .score-input-view {
   margin: 1rem 0;

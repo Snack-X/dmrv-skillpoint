@@ -69,10 +69,10 @@
 </template>
 
 <script>
-import { DIFFICULTIES_LOWERCASE, RANKS } from '../../data/consts';
-import { MAXIMUM_POTENTIAL_SKILLPOINT } from '../../data/computed';
+import { DIFFICULTIES_LOWERCASE, RANKS } from '/data/consts';
+import { MAXIMUM_POTENTIAL_SKILLPOINT } from '/data/computed';
 
-import ButtonSelector from '../components/ButtonSelector';
+import ButtonSelector from '/vue/components/common/ButtonSelector';
 
 export default {
   components: {
@@ -166,8 +166,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
 
 .rank-check-view {
   margin: 1rem 0;

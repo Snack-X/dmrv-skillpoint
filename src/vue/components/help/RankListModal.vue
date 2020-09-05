@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import { RANKS } from '../../../data/consts';
-import ButtonSelector from '../ButtonSelector';
+import { RANKS } from '/data/consts';
+import ButtonSelector from '/vue/components/common/ButtonSelector';
 
 export default {
   components: { ButtonSelector },

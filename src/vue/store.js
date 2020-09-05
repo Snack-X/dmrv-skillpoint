@@ -2,10 +2,10 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import Loki from 'lokijs';
 
-import * as Utils from './utils';
-import { BUTTONS, DIFFICULTIES_LOWERCASE } from '../data/consts';
-import { getSkillpoint } from '../data/formulas';
-import MusicData from '../data/musics';
+import * as Utils from '/vue/utils';
+import { BUTTONS, DIFFICULTIES_LOWERCASE } from '/data/consts';
+import { getSkillpoint } from '/data/formulas';
+import MusicData from '/data/musics';
 
 Vue.use(Vuex);
 

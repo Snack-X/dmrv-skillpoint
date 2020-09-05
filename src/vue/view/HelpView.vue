@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import RankListModal from '../components/help/RankListModal';
+import RankListModal from '/vue/components/help/RankListModal';
 
 export default {
   components: { RankListModal },

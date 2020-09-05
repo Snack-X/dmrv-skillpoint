@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import { BUTTONS } from '../../data/consts';
-import BaseSelector from './BaseSelector';
+import { BUTTONS } from '/data/consts';
+import BaseSelector from '/vue/components/base/BaseSelector';
 
 export default {
   components: {
@@ -32,8 +32,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/functions.scss';
-@import "../../css/variables.scss";
+@import '/css/functions.scss';
+@import '/css/variables.scss';
 
 .button-selector {
   @include nav-colors((

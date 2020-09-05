@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import { CATEGORIES } from '../../data/consts';
-import BaseSelector from './BaseSelector';
+import { CATEGORIES } from '/data/consts';
+import BaseSelector from '/vue/components/base/BaseSelector';
 
 export default {
   components: {
@@ -32,8 +32,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/functions.scss';
-@import "../../css/variables.scss";
+@import '/css/functions.scss';
+@import '/css/variables.scss';
 
 .category-selector {
   @include nav-colors((

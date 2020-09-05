@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import BaseModal from './BaseModal';
-import { DIFFICULTIES_LOWERCASE } from '../../data/consts';
+import BaseModal from '/vue/components/base/BaseModal';
+import { DIFFICULTIES_LOWERCASE } from '/data/consts';
 
 export default {
   components: { BaseModal },

@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import { version as pkgVersion } from '../../package.json';
-import HelpView from './view/HelpView';
-import ScoreInputView from './view/ScoreInputView';
-import RankCheckView from './view/RankCheckView';
+import { version as pkgVersion } from '/../package.json';
+import HelpView from '/vue/view/HelpView';
+import ScoreInputView from '/vue/view/ScoreInputView';
+import RankCheckView from '/vue/view/RankCheckView';
 
 export default {
   components: {

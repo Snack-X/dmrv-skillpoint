@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import BaseModal from './BaseModal';
-import { CATEGORIES, DIFFICULTIES_LOWERCASE } from '../../data/consts';
+import BaseModal from '/vue/components/base/BaseModal';
+import { CATEGORIES, DIFFICULTIES_LOWERCASE } from '/data/consts';
 
 export default {
   components: { BaseModal },

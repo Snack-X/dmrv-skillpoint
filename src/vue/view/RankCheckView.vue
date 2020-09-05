@@ -49,8 +49,8 @@
             <th>TITLE</th>
             <th class="text-center">DIFFICULTY</th>
             <th class="text-center">LEVEL</th>
-            <th class="text-center">ACCURACY</th>
-            <th class="text-center">SKILLPOINT</th>
+            <th class="text-center">RATE</th>
+            <th class="text-center">SKILL</th>
           </tr>
         </thead>
         <tbody>
@@ -234,10 +234,10 @@ export default {
 }
 
 .cell-accuracy {
-  width: 8rem;
+  width: 6rem;
 }
 
 .cell-skillpoint {
-  width: 8rem;
+  width: 6rem;
 }
 </style>

@@ -27,7 +27,7 @@ function parseMusics() {
     '^([^,]*)' +
     // non-greedy match for title & exclude quote
     ',"?(.*?)"?' +
-    // ;evels
+    // levels
     ',([0-9.]*)'.repeat(4 * 4)
   );
 

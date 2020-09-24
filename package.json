@@ -1,6 +1,6 @@
 {
   "name": "dmrv-skillpoint",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "DJMAX RESPECT V Skillpoint Tracker",
   "scripts": {
     "dev": "NODE_ENV=development parcel --port 37712 --out-dir .dev src/index.html",

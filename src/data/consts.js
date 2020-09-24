@@ -63,6 +63,7 @@ const DEFAULT_MAX_SKILL_POINT_PER_LEVEL = {
 const MAX_SKILL_POINT_PER_LEVEL = {
   '4': {
     ...DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
+    '14.0': 185,
     '14.1': 185.8,
     '14.2': 186.6,
     '14.3': 187.4,
@@ -72,6 +73,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
     '14.7': 190.6,
     '14.8': 191.4,
     '14.9': 192.2,
+    '15.0': 193,
     '15.1': 194,
     '15.2': 195,
     '15.3': 196,
@@ -82,6 +84,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
   },
   '5': {
     ...DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
+    '14.0': 185,
     '14.1':  185.9,
     '14.2':  186.8,
     '14.3':  187.7,
@@ -90,6 +93,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
     '14.6':  190.4,
     '14.7':  191.3,
     '14.8':  192.2,
+    '15.0': 193,
     '15.1':  193.6,
     '15.2':  194.2,
     '15.3':  194.8,
@@ -105,6 +109,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
   },
   '6': {
     ...DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
+    '14.0': 185,
     '14.1':  185.8,
     '14.2':  186.6,
     '14.3':  187.4,
@@ -114,6 +119,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
     '14.7':  190.6,
     '14.8':  191.4,
     '14.9':  192.2,
+    '15.0': 193,
     '15.1':  193.8,
     '15.2':  194.6,
     '15.3':  195.5,
@@ -125,6 +131,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
   },
   '8': {
     ...DEFAULT_MAX_SKILL_POINT_PER_LEVEL,
+    '14.0': 185,
     '14.1': 185.8,
     '14.2': 186.6,
     '14.3': 187.5,
@@ -133,6 +140,7 @@ const MAX_SKILL_POINT_PER_LEVEL = {
     '14.6': 190.2,
     '14.7': 191.1,
     '14.8': 192,
+    '15.0': 193,
     '15.1': 193.8,
     '15.2': 194.6,
     '15.3': 195.5,

@@ -11,7 +11,7 @@
   margin: .5rem -.25rem;
 
   .nav-link {
-    padding: .25rem 1rem;
+    padding: .25rem .75rem;
     margin: .25rem;
     font-weight: bold;
     border: 2px solid;

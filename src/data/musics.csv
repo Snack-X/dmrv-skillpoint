@@ -1,8 +1,9 @@
-﻿category,title,4B NM,4B HD,4B MX,4B SC,5B NM,5B HD,5B MX,5B SC,6B NM,6B HD,6B MX,6B SC,8B NM,8B HD,8B MX,8B SC
+category,title,4B NM,4B HD,4B MX,4B SC,5B NM,5B HD,5B MX,5B SC,6B NM,6B HD,6B MX,6B SC,8B NM,8B HD,8B MX,8B SC
 ,,,,,,,,,,,,,,,,,
 RESPECT,비상 ~Stay With Me~,4,7,,,6,10,,,6,10,11,,7,11,,
 RESPECT,혜성,3,8,,,5,9,,,6,10,,,5,11,,
 RESPECT,2Nite,3,6,,,4,9,,,3,8,,,4,8,,
+RESPECT,ALiCE,4,8,12,,5,9,11,14,5,9,11,15,5,10,12,
 RESPECT,Alone,6,10,,,4,8,,,5,8,12,,5,8,12,
 RESPECT,Always,4,7,,,6,9,,,5,10,,,6,10,,
 RESPECT,ANALYS,7,11,14.6,,7,11,,15.11,7,11,14.6,15.5,8,11,14.7,15.5
@@ -16,7 +17,9 @@ RESPECT,Boom!,4,8,12,,6,8,12,15.1,5,9,13,,6,10,13,15
 RESPECT,"Bullet, Wanted!",4,8,,,7,10,,,6,9,11,,7,11,,
 RESPECT,Chemical Slave,5,11,,14.8,6,,11,,6,12,,15.2,3,8,14.4,
 RESPECT,Child of Night,6,8,,15.4,7,9,12,,7,10,12,15.2,7,9,12,
+RESPECT,Do you want it,5,8,,,7,9,,13,5,9,,13,5,11,,
 RESPECT,Don't Die,5,10,13,15.3,7,10,14.2,,8,11,14.4,15.4,7,10,14.7,
+RESPECT,End of Mythology,3,8,12,,4,,12,13,5,8,12,13,4,7,12,
 RESPECT,Enter The Universe,6,10,12,,7,10,15.3,15.10,9,12,14.9,15.5,7,10,14.7,
 RESPECT,Far East Princess,5,7,10,,5,10,,,3,9,10,,5,9,,
 RESPECT,Fly Away,3,10,,,6,10,,,4,,11,,6,10,,
@@ -211,6 +214,7 @@ CLAZZIQUAI,First Kiss,2,4,8,10,2,4,7,,2,5,7,,2,4,8,
 CLAZZIQUAI,Flea,4,9,12,,4,9,12,,5,9,12,14.3,6,,13,
 CLAZZIQUAI,Freedom,5,7,10,,5,7,10,,7,,11,,6,8,10,
 CLAZZIQUAI,Here in the Moment,4,7,10,14.1,4,8,10,14.4,6,8,10,,5,,10,14.1
+CLAZZIQUAI,Here in the Moment ~Extended Mix~,4,6,9,14,5,8,11,,6,9,12,,5,8,11,14
 CLAZZIQUAI,In My Heart,3,7,10,,4,7,10,,4,8,10,13,3,7,11,13
 CLAZZIQUAI,Love Mode,3,8,,11,2,6,9,,4,9,,13,2,6,10,
 CLAZZIQUAI,Lover (CE Style),5,8,10,,5,11,,13,5,8,11,,4,8,10,14
@@ -221,6 +225,7 @@ CLAZZIQUAI,Urban Night (CE),4,8,,,5,8,,,3,8,,,3,,8,
 CLAZZIQUAI,Y (CE Style),5,8,11,14.2,5,10,,,5,8,11,,5,9,13,
 ,,,,,,,,,,,,,,,,,
 BLACK SQUARE,"고백, 꽃, 늑대 part.2",3,8,,,4,10,,13,4,8,11,,5,11,,13
+BLACK SQUARE,Airwave ~Extended Mix~,8,10,13,,7,10,14,,6,12,14,,7,10,13,
 BLACK SQUARE,Beat U Down,8,12,14.2,,8,10,14.5,,9,12,14.4,15.2,8,10,14.4,
 BLACK SQUARE,Colours of Sorrow,4,,11,13,6,9,12,,5,9,12,13,6,9,13,
 BLACK SQUARE,Cypher Gate,5,8,,14.7,7,10,,14.8,7,10,13,,7,10,13,15.2
@@ -270,6 +275,82 @@ EMOTIONAL SENSE,Space of Soul,6,10,14.5,,7,12,14.3,15.8,7,12,14.5,15.6,7,12,14.6
 EMOTIONAL SENSE,Super Lovely,7,11,15.2,,6,12,15.6,15.10,6,11,15.1,15.7,6,12,15.3,
 EMOTIONAL SENSE,Urban Night,5,13,,,5,12,,14.5,6,,13,15.2,6,,13,
 EMOTIONAL SENSE,Yo! Max!,2,8,,,4,8,,,4,,8,,4,8,,
+,,,,,,,,,,,,,,,,,
+TECHNIKA 1,Access,2,4,7,12,3,6,,12,3,,12,,5,7,11,
+TECHNIKA 1,Area 7,4,,10,,4,7,10,,5,7,11,,4,7,12,
+TECHNIKA 1,Beyond the Future,4,8,11,14,4,8,11,,4,9,12,,4,9,12,15
+TECHNIKA 1,Dear my Lady,5,9,,14,5,7,10,,5,7,11,13,4,7,10,
+TECHNIKA 1,DJMAX,2,7,,,3,,8,,4,8,,,4,7,,
+TECHNIKA 1,Fury,4,9,11,,5,8,12,,5,9,12,15,5,10,12,15
+TECHNIKA 1,HEXAD,5,10,13,14,5,9,12,15,5,9,12,15,6,10,13,
+TECHNIKA 1,Honeymoon,3,5,8,,4,,8,,4,8,,,3,9,,
+TECHNIKA 1,I want You,3,6,8,14,3,8,10,,5,8,11,13,4,9,11,
+TECHNIKA 1,Landscape,6,9,,,6,8,11,14,5,9,12,15,7,9,13,15
+TECHNIKA 1,Melody,5,8,11,,5,8,11,15,4,8,12,,5,10,12,14
+TECHNIKA 1,Play the Future,4,9,,14,4,7,10,,6,10,,,5,,10,
+TECHNIKA 1,Remember,3,8,10,,4,7,10,,4,7,11,,5,,11,13
+TECHNIKA 1,Shoreline,4,8,10,,6,11,,,6,11,,14,6,8,12,14
+TECHNIKA 1,SON OF SUN,7,10,14,,7,10,14,15,7,11,14,,7,10,15,15
+TECHNIKA 1,SON OF SUN ~Extended Mix~,7,10,14,,7,10,15,,7,11,14,,8,11,15,
+TECHNIKA 1,SuperSonic,4,7,11,,5,8,12,14,6,9,12,,6,10,13,
+TECHNIKA 1,Sweet Shining Shooting Star,3,8,10,12,3,6,10,,6,,10,13,6,,11,
+TECHNIKA 1,The Last Dance,4,,8,11,5,11,,,5,10,,,4,,12,
+TECHNIKA 1,Thor,7,11,14,,6,10,14,,6,11,14,15,7,11,14,15
+TECHNIKA 1,Voyage,6,9,,,5,10,,,3,7,11,,5,11,,
+,,,,,,,,,,,,,,,,,
+TECHNIKA 2,Airwave,5,9,12,14,6,9,13,,7,,14,15,7,11,13,
+TECHNIKA 2,BEE-U-TIFUL,6,,11,,7,10,12,15,6,11,13,,6,10,13,
+TECHNIKA 2,Burn it Down,4,7,9,,4,9,,,4,8,11,,5,7,12,
+TECHNIKA 2,Cosmic Fantastic Lovesong,2,5,9,12,3,8,11,,3,7,12,,4,7,11,
+TECHNIKA 2,Cozy Quilt,3,9,,,2,7,,13,3,7,,13,3,7,12,
+TECHNIKA 2,D2,7,,14,15,6,9,13,15,7,12,15,,7,11,15,15
+TECHNIKA 2,Dream of Winds,5,8,12,,6,10,13,,4,8,12,15,5,9,12,15
+TECHNIKA 2,Dual Strikers,6,8,,15,6,9,12,,6,10,13,,7,10,13,
+TECHNIKA 2,Eternal Fantasy ~유니의 꿈~,2,5,,,2,5,,,3,5,9,,3,7,,11
+TECHNIKA 2,La Campanella : Nu Rave,6,9,13,14,7,13,,14,7,,13,,7,11,13,14
+TECHNIKA 2,Love is Beautiful,4,5,7,,5,8,,12,4,7,9,,5,9,,12
+TECHNIKA 2,MonoXide,5,9,12,,6,12,,,6,9,12,14,5,12,,
+TECHNIKA 2,Nova ~Mr.Funky Remix~,5,7,,,6,10,,,7,10,12,,6,,12,
+TECHNIKA 2,Put'Em Up,2,5,8,,5,9,,,3,6,9,,5,10,,13
+TECHNIKA 2,Puzzler,5,,10,,4,10,,13,4,11,,,5,9,12,
+TECHNIKA 2,Rage Of Demon,6,11,15,15,8,11,15,,8,12,15,15,8,13,15,15
+TECHNIKA 2,Say it from your heart,3,5,10,,4,8,10,,3,8,,13,4,9,,
+TECHNIKA 2,Sweet Dream,4,6,10,,3,5,8,13,4,7,11,13,5,11,,
+TECHNIKA 2,The Guilty,4,7,12,,6,10,13,14,7,12,,,7,,13,15
+TECHNIKA 2,Thor ~Extended Mix~,5,11,14,,6,10,15,,6,11,14,,8,,14,15
+TECHNIKA 2,Trip,1,4,6,11,2,5,8,,3,5,8,,3,5,8,
+TECHNIKA 2,XLASHER,4,8,11,,5,10,13,15,4,8,13,,6,10,13,
+TECHNIKA 2,Y ~Extended Mix~,6,12,14,,6,10,12,,6,9,12,,6,10,13,
+,,,,,,,,,,,,,,,,,
+TECHNIKA 3,설레임 Part.2,2,4,8,12,5,8,,,4,,10,,6,,11,
+TECHNIKA 3,유령,3,5,9,13,4,,8,13,4,9,,,5,10,12,
+TECHNIKA 3,A Life With You,4,,9,,4,6,10,,6,10,12,,6,12,,14
+TECHNIKA 3,AD2222,5,8,11,,6,9,14,15,6,10,13,15,6,10,12,
+TECHNIKA 3,AD2222 ~Extended Mix~,5,10,12,,6,10,13,,7,,13,,7,10,13,
+TECHNIKA 3,Angel,4,9,12,,6,10,12,,6,9,13,,6,10,12,15
+TECHNIKA 3,Bamboo on Bamboo,8,12,15,15,6,12,15,,7,12,15,15,8,12,15,
+TECHNIKA 3,Black Swan,5,8,12,,5,11,13,,5,10,12,15,6,10,14,15
+TECHNIKA 3,Dark Prism,7,13,,,5,12,13,15,5,11,14,15,6,,13,
+TECHNIKA 3,Dream Again,2,5,9,,4,7,,,4,7,,,3,9,10,
+TECHNIKA 3,EGG,4,7,10,,5,10,13,,5,10,12,,6,10,13,
+TECHNIKA 3,EGG ~Extended Mix~,4,7,11,,6,10,,,5,11,13,,7,13,,
+TECHNIKA 3,Emblem,8,12,14,,6,9,13,15,8,13,,15,6,9,14,
+TECHNIKA 3,Fallin' in LUV,3,7,,12,3,8,10,,3,6,10,,5,,10,13
+TECHNIKA 3,Feel Ma Beat,7,11,14,,9,11,14,,8,11,14,14,8,11,14,15
+TECHNIKA 3,Give Me 5,5,,10,,5,9,11,,5,9,,,5,9,11,
+TECHNIKA 3,Kung-Fu Rider,6,9,,13,6,10,,14,6,10,,14,6,10,12,
+TECHNIKA 3,"My Heart, My Soul",2,6,,,5,7,,,4,7,10,,4,9,,
+TECHNIKA 3,Now a NEW Day,3,7,10,14,5,8,11,,5,9,11,13,5,8,11,
+TECHNIKA 3,Out of CTRL,7,10,13,15,7,11,,15,8,13,,,6,10,13,15
+TECHNIKA 3,Over the Rainbow,7,12,,15,5,9,12,,7,10,12,15,7,13,,
+TECHNIKA 3,Right Back,8,11,14,,8,,13,,7,10,14,,5,10,14,14
+TECHNIKA 3,Showdown,6,9,13,,6,8,,14,5,11,14,,6,10,13,14
+TECHNIKA 3,SigNalize,6,8,10,,7,9,,14,7,,12,14,6,10,14,
+TECHNIKA 3,Supernova,5,,11,,6,,12,15,5,9,13,,6,,14,15
+TECHNIKA 3,Supersonic 2011,6,12,,15,7,11,,15,7,12,,,5,10,14,
+TECHNIKA 3,Wanna Be Your Lover,1,4,7,,5,8,,,4,,10,,4,10,,
+TECHNIKA 3,Xeus,6,11,13,,8,11,14,,7,11,14,15,6,11,14,15
+TECHNIKA 3,You & Me,3,5,7,12,4,8,,12,3,7,10,,3,7,10,
 ,,,,,,,,,,,,,,,,,
 GUILTY GEAR,Break a Spell,5,9,14.2,,6,10,,15.5,7,9,14.3,15.5,7,10,14.4,
 GUILTY GEAR,Holy Orders (Be Just Or Be Dead),4,9,11,14.2,6,8,11,,6,9,12,,6,10,11,15.2

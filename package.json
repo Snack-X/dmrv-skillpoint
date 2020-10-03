@@ -17,16 +17,16 @@
     "parcel-plugin-static-files-copy": "^2.5.0",
     "postcss-modules": "^3.2.2",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.10",
+    "sass": "^1.26.11",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
-    "lokijs": "^1.5.9",
+    "lokijs": "^1.5.11",
     "popper.js": "^1.16.1",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vuex": "^3.5.1"
   },
   "browserslist": [

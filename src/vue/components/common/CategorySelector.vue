@@ -38,8 +38,8 @@ export default {
 .category-selector {
   @include nav-colors((
     $color-respect, $color-portable1, $color-portable2, $color-trilogy, $color-clazziquai, $color-blacksquare,
-    $color-technika1, $color-technika2, $color-technika3,
     $color-vextension, $color-emotionals,
+    $color-technika1, $color-technika2, $color-technika3,
     $color-guiltygear, $color-cytus, $color-deemo, $color-groovecoaster
   ));
 }
